@@ -1,0 +1,73 @@
+ /*
+   Bristol Ipsum
+   
+   DEV NOTES
+   + Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu leo quis tortor facilisis pharetra.
+     + Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu leo quis tortor facilisis pharetra.
+   + Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec tellus neque.
+   + Vestibulum sit amet velit diam. Maecenas eu eleifend nunc. Ut fringilla metus vitae nulla mollis id viverra augue feugiat.
+ */
+ 
+ $white:#fff;
+ $black:#4c4c4c;
+ $blue:#0000cc;
+ $purple:#551a8b;
+ $green:#149900;
+ $orange:#ffaa00;
+ $light-grey:#ddd;
+ $code-light-red:#ff0000;
+ $code-dark-red:#a31515;
+ $code-blue:#0000ff;
+
+ @mixin list_style_none {
+   background: none;
+   padding-left: 0;
+   list-style-type: none;
+   list-style-position: outside;
+ }
+
+ /*
+ * Index:
+ * 
+ * 1. Fonts
+ * 2. Normalise HTML5
+ * 3. Base / Foundation
+ * 4. Layout
+ * 5. Modules
+ * 6. Helper Classes
+ */
+ 
+  /* ----- 1. Fonts ----- */
+    @import "fonts";
+  
+  /* ----- 2. Normalise HTML5 ----- */
+    @import "normalise";
+    
+  /* ----- 3. Base / Foundation ----- */
+    @import "base";
+  
+  /* ----- 4. Layout ----- */
+    @import "layout";
+    
+  /* ----- 5. Modules ----- */
+    @import "modules";
+  
+  /* ----- 6. Helper Classes ----- */
+  
+    .clearfix:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+  
+    .image-replacement {
+      overflow: hidden;
+      text-align: left;
+      display: block;
+      line-height:0;
+      text-indent: -1000em;
+    }
+  
+  
