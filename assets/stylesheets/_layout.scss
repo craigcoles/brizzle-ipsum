@@ -1,0 +1,78 @@
+/* Layout */
+/* Main pae layout, collumns, etc etc  */
+
+// Main Content
+// ------------------------------------------------------------
+
+.page {
+  position:relative;
+}
+
+.content {
+  @extend %clearfix;
+  width:960px;
+  position:relative;
+  margin:50px auto;
+}
+
+form#luvver {
+  float:left;
+  width:220px;
+  padding:20px;
+  ul {@include list_style_none}
+  .form-wrap {
+    @extend %clearfix;
+    input#paragraphs {float:right;}
+  }
+}
+
+.output {
+  display:none;
+  float:right;
+  width:600px;
+  margin-left:20px;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.45;
+  padding: 40px;
+}
+
+.display {
+  display:block;
+}
+
+// Supporting Content
+// ------------------------------------------------------------
+
+// .supporting-content {}
+
+// Supplementary Content
+// ------------------------------------------------------------
+
+// .supplementary-content {}
+
+// Custom Page Layouts
+// ------------------------------------------------------------
+
+// Footer
+// ------------------------------------------------------------
+
+footer.site-footer {
+  width:960px;
+  color:#fff;
+  text-align:center;
+  margin:0 auto;
+} 
+
+// Clearfix
+// ------------------------------------------------------------
+
+%clearfix {
+   &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
+}

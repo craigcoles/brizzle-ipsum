@@ -1,0 +1,33 @@
+/* Base */
+/* Base styles for html elements  */
+
+// Body
+// ------------------------------------------------------------
+
+body {
+  background: url(/assets/images/bristol.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: $dark;
+}
+
+// Paragraphs
+// ------------------------------------------------------------
+
+// Links
+// ------------------------------------------------------------
+
+a {
+  text-decoration: none;
+  &:link, &:visited, &:active  {color: $link;}
+  &:hover { color: $link-hover;}
+  &:active, &:hover {outline: none;}
+}
+a img {border: none;}
+
+// Table
+// ------------------------------------------------------------
+
+table { border-collapse: collapse; }

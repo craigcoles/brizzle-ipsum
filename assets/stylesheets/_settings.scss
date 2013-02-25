@@ -1,0 +1,39 @@
+/* Settings */
+/* This is where all vars and mixins are stored for use in all other style sheets */
+
+// Vars
+// ------------------------------------------------------------
+
+/* Colours */
+$light:#fff;
+$dark:#000;
+
+/* Links */
+$link:#00f;
+$link-hover: darken($link, 20%);
+
+/* Base Font Size */
+$basefont: 16;  
+
+
+// Mixins
+// ------------------------------------------------------------
+
+@mixin list_style_none {
+  background: none;
+  padding-left: 0;
+  list-style-type: none;
+  list-style-position: outside;
+}
+
+@mixin border_radius($radius: 4px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin font_size($size) {
+  font-size: $size + px;
+  font-size: ($size/$basefont) + 0rem;
+}
