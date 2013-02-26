@@ -33,7 +33,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>Bristol Ipsum</title>
+  <title>Brizzle Ipsum</title>
   <!-- so:meta-->
   <meta charset="utf-8">
   <meta name="robots" content="all" />
