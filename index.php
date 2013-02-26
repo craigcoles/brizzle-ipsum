@@ -39,18 +39,17 @@
   <meta name="robots" content="all" />
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--  Mobile viewport optimized: j.mp/bplateviewport -->
   
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="Brizzle Ipsum, a Lorem Ipsum Genarator with a Bristolian Dialect. " />
+  <meta name="keywords" content="Brizzle, Ipsum, Lorem, Ipsum, Brizzle Ipsum, Lorem, Ipsum, Generator, Lorem Ipsum Genrator, Bristol, Craig Coles, Liam Richardson, Beef" />
   
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="content-language" content="en" />
   
   <meta name="robots" content="noodp,noydir" />
   
-  <meta name="author" content="Site Title" />
-  <meta name="copyright" content="Year, Site Title" />
+  <meta name="author" content="Brizzle Ipsum" />
+  <meta name="copyright" content="2013, Brizzle Ipsum" />
   
   <meta name="Geo.Country" content="GB" />
   <meta name="Geo.Region" content="GB-BST" />
@@ -89,6 +88,7 @@
 
   <div class="content">
     <h1>Bristol Ipsum</h1>
+    <p>A Lorem Ipsum Genarator with a Bristolian Dialect.</p>
 
     <form id="luvver" class="block" action="" method="get">
 
@@ -126,7 +126,7 @@
   </div>
 
   <footer class="site-footer">
-  <p>Made 2013 <a href="http://craigcoles.co.uk" title="Craig Coles">Craig Coles</a>. With help from <a href="http://discoliam.com" title="DiscoLiam">Liam Richardson</a>.<br />Background Image: <a href="http://www.flickr.com/photos/danbri/8072271/">http://www.flickr.com/photos/danbri/8072271/</a>. Based on <a href="https://github.com/petenelson/bacon-ipsum" title="Bacon Ipsum on Github">Bacon Ipsum</a> by <a href="https://twitter.com/GunGeekATX" title="Pete Nelson on Twitter">Pete Nelson</a>.</p>
+  <p>Made 2013 <a href="http://craigcoles.co.uk" title="Craig Coles">Craig Coles</a>. With help from <a href="http://discoliam.com" title="DiscoLiam">Liam Richardson</a>.<br />Background Image taken by <a href="http://www.flickr.com/photos/danbri/8072271/">Dan Brickley</a>. Based on <a href="https://github.com/petenelson/bacon-ipsum" title="Bacon Ipsum on Github">Bacon Ipsum</a> by <a href="https://twitter.com/GunGeekATX" title="Pete Nelson on Twitter">Pete Nelson</a>.</p>
   </footer>
 
 

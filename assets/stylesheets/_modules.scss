@@ -19,3 +19,29 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
+
+form input[type="submit"] {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  border: 0;
+  background: $link;
+  color: $light;
+  padding: 4px 8px;
+  &:hover{background: darken($link, 20%)}  
+}
+
+
+form#luvver {
+  ul {
+    @include list_style_none;
+    margin-top: 5px;
+  }
+  .form-wrap {
+    @extend %clearfix;
+    input#paragraphs {margin-left: 10px; padding: 0;}
+    margin: 0 0 10px 0;
+  }
+  input[type="submit"] {margin-top: 10px;}
+}
