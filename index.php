@@ -87,7 +87,7 @@
 <body>
 
   <div class="content">
-    <h1>Bristol Ipsum</h1>
+    <h1>Brizzle Ipsum</h1>
     <p>A Lorem Ipsum Genarator with a Bristolian Dialect.</p>
 
     <form id="luvver" class="block" action="" method="get">
