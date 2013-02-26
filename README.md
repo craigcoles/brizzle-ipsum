@@ -1,4 +1,4 @@
-brizzle-ipsum
+Brizzle Ipsum
 =============
 
 Lorem ipsum inspired by the dialect of Brizzle folk.
