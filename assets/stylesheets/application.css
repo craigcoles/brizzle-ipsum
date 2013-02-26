@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900);
 /* This is a manifest file that'll be compiled into application.css, which will include all the files listed below. */
 /* normalize.css v2.1.0 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
@@ -156,21 +159,25 @@ h1, h2, h3, h4, h5, h6, p, dl, ol, ul {
 /* Typography */
 /* Font families, sizes and styles */
 html, body, textarea, input {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 100%;
-  word-spacing: 2px; }
+  font-family: "Merriweather", serif;
+  font-size: 87.5%;
+  word-spacing: 2px;
+  font-weight: thin; }
 
-@font-face {
-  font-family: "Font";
-  src: url("../fonts/Font.eot");
-  src: url("../fonts/Font.eot?#iefix") format("embedded-opentype"), url("../fonts/Font.woff") format("woff"), url("../fonts/Font.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+h1 {
+  font-family: "Playfair Display", serif; }
 
-/* Bold */
-/* Italic */
-/* Underline */
-/* Normal */
+form, input {
+  font-family: "Open Sans", sans-serif; }
+
+h1 {
+  font-size: 40px;
+  font-size: 2.85714rem; }
+
+footer {
+  font-size: 12px;
+  font-size: 0.85714rem; }
+
 /* Base */
 /* Base styles for html elements  */
 body {
@@ -184,23 +191,17 @@ body {
 a {
   text-decoration: none; }
   a:link, a:visited, a:active {
-    color: blue; }
+    color: #e0a55f; }
   a:hover {
-    color: #000099; }
+    color: #b67323; }
   a:active, a:hover {
     outline: none; }
 
-a img {
-  border: none; }
-
-table {
-  border-collapse: collapse; }
+html, body {
+  height: 100%; }
 
 /* Layout */
 /* Main pae layout, collumns, etc etc  */
-.page {
-  position: relative; }
-
 .content {
   width: 960px;
   position: relative;
@@ -214,9 +215,12 @@ form#luvver {
     background: none;
     padding-left: 0;
     list-style-type: none;
-    list-style-position: outside; }
+    list-style-position: outside;
+    margin-top: 5px; }
   form#luvver .form-wrap input#paragraphs {
     float: right; }
+  form#luvver input[type="submit"] {
+    margin-top: 5px; }
 
 .output {
   display: none;
@@ -226,16 +230,16 @@ form#luvver {
   font-size: 13px;
   margin: 0;
   line-height: 1.45;
-  padding: 40px; }
-
-.display {
+  padding: 40px;
   display: block; }
 
 footer.site-footer {
   width: 960px;
   color: #fff;
   text-align: center;
-  margin: 0 auto; }
+  margin: 0 auto 50px auto;
+  display: block;
+  clear: both; }
 
 .content:after, form#luvver .form-wrap:after {
   content: ".";

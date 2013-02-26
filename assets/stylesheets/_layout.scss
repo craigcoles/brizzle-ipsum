@@ -4,10 +4,6 @@
 // Main Content
 // ------------------------------------------------------------
 
-.page {
-  position:relative;
-}
-
 .content {
   @extend %clearfix;
   width:960px;
@@ -19,10 +15,16 @@ form#luvver {
   float:left;
   width:220px;
   padding:20px;
-  ul {@include list_style_none}
+  ul {
+    @include list_style_none;
+    margin-top: 5px;
+  }
   .form-wrap {
     @extend %clearfix;
     input#paragraphs {float:right;}
+  }
+  input[type="submit"] {
+    margin-top: 5px;
   }
 }
 
@@ -35,33 +37,17 @@ form#luvver {
   margin: 0;
   line-height: 1.45;
   padding: 40px;
-}
-
-.display {
   display:block;
 }
 
-// Supporting Content
-// ------------------------------------------------------------
-
-// .supporting-content {}
-
-// Supplementary Content
-// ------------------------------------------------------------
-
-// .supplementary-content {}
-
-// Custom Page Layouts
-// ------------------------------------------------------------
-
-// Footer
-// ------------------------------------------------------------
 
 footer.site-footer {
   width:960px;
   color:#fff;
   text-align:center;
-  margin:0 auto;
+  margin:0 auto 50px auto;
+  display: block;
+  clear: both;
 } 
 
 // Clearfix

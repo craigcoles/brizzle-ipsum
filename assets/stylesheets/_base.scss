@@ -25,9 +25,7 @@ a {
   &:hover { color: $link-hover;}
   &:active, &:hover {outline: none;}
 }
-a img {border: none;}
 
-// Table
-// ------------------------------------------------------------
-
-table { border-collapse: collapse; }
+html, body {
+  height: 100%;
+}
