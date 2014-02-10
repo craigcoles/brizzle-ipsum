@@ -11,7 +11,7 @@ $(document).ready(function() {
       url: "/get/?paras="+paragraphs+"&type="+type+"&start-with-luvver="+startWith,
       dataType: "html",
       success: function(html){
-        $('.output').html(html);   
+        $('.output').html(html);
       },
       error: function(){
         alert('Whoa! HTTP bailed! Try again.');

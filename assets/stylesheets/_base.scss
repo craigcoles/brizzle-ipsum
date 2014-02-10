@@ -1,31 +1,44 @@
-/* Base */
-/* Base styles for html elements  */
+// ----- HTML
 
-// Body
-// ------------------------------------------------------------
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+// --- Apply a natural box layout model to all elements
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+// ----- Body
 
 body {
-  background: url(/assets/images/bristol.jpg) no-repeat top center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: $light;
   color: $dark;
 }
 
-// Paragraphs
-// ------------------------------------------------------------
+::selection {
+  background: $light;
+  color: $brand-orange;
+}
 
-// Links
-// ------------------------------------------------------------
+::-moz-selection {
+  background: $light;
+  color: $brand-orange;
+}
+
+// ----- Paragraphs
+
+// ----- Links
 
 a {
   text-decoration: none;
-  &:link, &:visited, &:active  {color: $link;}
-  &:hover { color: $link-hover;}
+  &:link, &:visited, &:active  {color: $brand-orange; font-weight:bold;}
+  &:hover { color: $brand-orange-hover;}
   &:active, &:hover {outline: none;}
 }
 
-h1{
-  margin: 0 0 0 0;
-}
+a img {border: none;}
+
+// ----- Table
+
+table { border-collapse: collapse; }

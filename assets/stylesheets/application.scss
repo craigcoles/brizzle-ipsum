@@ -1,16 +1,15 @@
-/* This is a manifest file that'll be compiled into application.css, which will include all the files listed below. */
- 
-// Platter
-// ------------------------------------------------------------
+// ----- Base Files
 
+@import "helpers";
 @import "normalise";
-@import "settings";
-@import "typography";
 @import "base";
-@import "layout";
-@import "modules";
-@import "theme";
-@import "media-queries";
 
-// Vendor
-// ------------------------------------------------------------
+@import "typography";
+
+@import "layout";
+
+@import "modules";
+
+// ------ Media Queries 
+
+// @import "media_queries";

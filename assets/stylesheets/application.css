@@ -1,7 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-/* This is a manifest file that'll be compiled into application.css, which will include all the files listed below. */
-/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+.site-title, .site-title:before, .site-title:after {
+  overflow: hidden;
+  text-align: left;
+  display: block;
+  line-height: 0;
+  text-indent: -1000em; }
+
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
 
@@ -31,7 +35,7 @@ a:active, a:hover {
 
 h1 {
   font-size: 2em;
-  margin: 0 0 0.67em 0; }
+  margin: 0 0 .67em 0; }
 
 abbr[title] {
   border-bottom: 1px dotted; }
@@ -88,7 +92,7 @@ figure {
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: .35em .625em .75em; }
 
 legend {
   border: 0;
@@ -150,131 +154,108 @@ h1, h2, h3, h4, h5, h6, p, dl, ol, ul {
   margin-top: 0;
   padding-top: 0; }
 
-/* Settings */
-/* This is where all vars and mixins are stored for use in all other style sheets */
-/* Colours */
-/* Links */
-/* Base Font Size */
-/* Typography */
-/* Font families, sizes and styles */
-html, body, textarea, input {
-  font-family: "Open Sans", sans-serif;
-  font-size: 106.25%;
-  word-spacing: 2px; }
+html {
+  -webkit-font-smoothing: antialiased; }
 
-form, input, footer {
-  font-size: 12px;
-  font-size: 0.70588rem; }
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
-.output {
-  font-family: "Gentium Book Basic", serif; }
-
-h1 {
-  font-size: 40px;
-  font-size: 2.35294rem; }
-
-/* Base */
-/* Base styles for html elements  */
 body {
-  background: url(/assets/images/bristol.jpg) no-repeat top center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: white;
   color: black; }
+
+::selection {
+  background: white;
+  color: #ff4629; }
+
+::-moz-selection {
+  background: white;
+  color: #ff4629; }
 
 a {
   text-decoration: none; }
   a:link, a:visited, a:active {
-    color: #e0a55f; }
+    color: #ff4629;
+    font-weight: bold; }
   a:hover {
-    color: #b67323; }
+    color: #a91700; }
   a:active, a:hover {
     outline: none; }
 
-h1 {
-  margin: 0 0 0 0; }
+a img {
+  border: none; }
 
-/* Layout */
-/* Main pae layout, collumns, etc etc  */
-.content {
-  width: 960px;
-  margin: 50px auto; }
+table {
+  border-collapse: collapse; }
 
-form#luvver {
+#page {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  clear: both;
+  list-style: none;
+  overflow: hidden; }
+
+.site-header, .main-content, .site-footer {
   float: left;
-  width: 220px;
-  padding: 20px; }
+  padding: 0 50px; }
 
-.output {
-  display: none;
-  float: right;
-  width: 600px;
-  margin-left: 20px;
-  margin: 0;
-  line-height: 1.45;
-  padding: 40px;
-  display: block; }
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%; }
 
-footer.site-footer {
-  width: 960px;
-  color: #fff;
-  text-align: center;
-  margin: 0 auto 50px auto;
-  display: block;
-  clear: both; }
+.main-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%; }
 
-.content:after, form#luvver .form-wrap:after {
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35%; }
+
+.site-header {
+  background: url(/assets/images/bristol.jpg) no-repeat top left fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.site-title {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 209px;
+  height: 189px;
+  margin: 0 auto;
+  background: url(/assets/images/brizzle-ipsum.png) no-repeat 0 38px; }
+  .site-title a {
+    display: block;
+    height: 97px;
+    margin: 21px 0 20px 0;
+    border-bottom: 0; }
+
+.site-title:before {
   content: ".";
   display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
+  width: 138px;
+  height: 18px;
+  margin: 0 auto;
+  background: url(/assets/images/five-stars.png) no-repeat 0 0; }
 
-/* Modules */
-/* Modules, components and site elements */
-.block {
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-  position: relative;
-  background: #f0f0f0;
-  background: black;
-  background: rgba(0, 0, 0, 0.6);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; }
-
-form input[type="submit"] {
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-  border: 0;
-  background: #e0a55f;
-  color: white;
-  padding: 4px 8px; }
-  form input[type="submit"]:hover {
-    background: #b67323; }
-
-form#luvver ul {
-  background: none;
-  padding-left: 0;
-  list-style-type: none;
-  list-style-position: outside;
-  margin-top: 5px; }
-form#luvver .form-wrap {
-  margin: 0 0 10px 0; }
-  form#luvver .form-wrap input#paragraphs {
-    margin-left: 10px;
-    padding: 0; }
-form#luvver input[type="submit"] {
-  margin-top: 10px; }
-
-/* Typography */
-/* Color and theme styles */
-.output, form#luvver {
-  color: #f0f0f0; }
-
-/* Media Queries */
-/* Media queries for responsive design breakpooints */
+.site-title:after {
+  content: "Made in Bristol";
+  display: block;
+  width: 136px;
+  height: 34px;
+  margin: 0 auto 0;
+  background: url(/assets/images/made-in-bristol.png) no-repeat 0 0; }

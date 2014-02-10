@@ -1,20 +1,29 @@
-/* Typography */
-/* Font families, sizes and styles */
+// ----- Font Face
 
-// Base Fonts
-// ------------------------------------------------------------
+// ----- Font Sizing
 
-@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+// @include font_size(14);
 
-html, body, textarea, input {
-  font-family: 'Open Sans', sans-serif;
-  font-size : (($basefont * 100) / 16) + 0%;
-  word-spacing:2px;
-}
+// ----- Font Styling
 
-form, input, footer {@include font_size(12);}
+// Bold
+// {font-weight: bold;}
 
-.output {font-family: 'Gentium Book Basic', serif;}
+// Italic
+// {font-style: italic;}
 
-h1 {@include font_size(40);}
+// Underline
+// {text-decoration: underline;}
+
+// Normal
+// {font-weight: normal !important; font-style: normal !important;}
+// {font-weight: normal !important;}
+// {font-style: normal !important;}
+
+// Text Transform
+// {text-transform: uppercase;}
+// {text-transform: none;}
+
+// Line Height 
+
+// Letter spacing 

@@ -1,50 +1,38 @@
-/* Layout */
-/* Main pae layout, collumns, etc etc  */
-
-// Main Content
-// ------------------------------------------------------------
-
-.content {
-  @extend %clearfix;
-  width:960px;
-  margin:50px auto;
-}
-
-form#luvver {
-  float:left;
-  width:220px;
-  padding:20px;
-}
-
-.output {
-  display:none;
-  float:right;
-  width:600px;
-  margin-left:20px;
-  margin: 0;
-  line-height: 1.45;
-  padding: 40px;
-  display:block;
-}
-
-footer.site-footer {
-  width:960px;
-  color:#fff;
-  text-align:center;
-  margin:0 auto 50px auto;
-  display: block;
+#page {
+  width: auto;
+  max-width: 100%;
+  margin:0 auto;
   clear: both;
-} 
+  list-style: none;
+  overflow: hidden;
+}
 
-// Clearfix
-// ------------------------------------------------------------
+%grid-item {
+  float: left;
+  padding:0 50px;
+}
 
-%clearfix {
-   &:after {
-      content: ".";
-      display: block;
-      height: 0;
-      clear: both;
-      visibility: hidden;
-  }
+.site-header {
+  position:absolute;
+  top:0;
+  left:0;
+  @extend %grid-item;
+  width:35%;
+  height:100%;
+}
+
+.main-content {
+  position:absolute;
+  top:0;
+  right:0;
+  @extend %grid-item;
+  width:65%;
+}
+
+.site-footer {
+  position:absolute;
+  bottom:0;
+  left:0;
+  @extend %grid-item;
+  width:35%;
 }

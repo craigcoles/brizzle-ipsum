@@ -1,0 +1,87 @@
+// Colours
+$light:#fff;
+$dark:#000;
+$black-soft:#4c4c4c;
+$light-grey:#ddd;
+$code-light-red:#ff0000;
+$code-dark-red:#a31515;
+$code-blue:#0000ff;
+
+$dark-soft:#262930;
+$dark-hard:#202227;
+$dark-hardest:#201e1c;
+
+$black-transition:#1e1c1a;
+
+$spotify:#7ab800;
+$twitter:#2290bf;
+
+$brand-orange: #ff4629;
+$brand-orange-hover: darken($brand-orange, 25%);
+
+$twitter-bg: #2c3035;
+
+// Flat Colours
+$conrete:#95a5a6;
+$silver:#bdc3c7;
+$asbestos:#7f8c8d;
+
+$wet-asphalt:#34495e;
+$midnight-blue:#2c3e50;
+
+$alizarin:#e74c3c;
+$pomrgrante:#c0392b;
+
+// Links
+$link:#00f;
+$link-hover: darken($link, 20%);
+
+// Base Font Size
+$basefont: 16;
+
+
+// ----- Mixins
+
+@mixin list_style_none {
+  background: none;
+  padding-left: 0;
+  list-style-type: none;
+  list-style-position: outside;
+}
+
+@mixin border_radius($radius: 4px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin font_size($size: 12, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+@mixin line_height($size: 12, $base: 16) {
+  line-height: $size + px;
+  line-height: ($size / $base) * 1rem;
+}
+
+// ----- Placeholders
+
+%clearfix {
+   &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
+}
+
+%image-replacement {
+   overflow: hidden;
+   text-align: left;
+   display: block;
+   line-height:0;
+   text-indent: -1000em;
+}

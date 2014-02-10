@@ -1,47 +1,46 @@
-/* Modules */
-/* Modules, components and site elements */
+.site-header {
+  background: url(/assets/images/bristol.jpg) no-repeat top left fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
-// Header
-// ------------------------------------------------------------
-
-// Main Content
-// ------------------------------------------------------------
-
-.block {
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
+.site-title {
   position: relative;
-  background: #f0f0f0;
-  background: black;
-  background: rgba(0, 0, 0, 0.6);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width:209px;
+  height:189px;
+  margin:0 auto;
+  background: url(/assets/images/brizzle-ipsum.png) no-repeat 0 38px;
+  @extend %image-replacement;
+  a {
+    display:block; 
+    height:97px;
+    margin:21px 0 20px 0;
+    border-bottom:0;
+  }
 }
 
-form input[type="submit"] {
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-  border: 0;
-  background: $link;
-  color: $light;
-  padding: 4px 8px;
-  &:hover{background: darken($link, 20%)}  
+.site-title:before {
+  content: ".";
+  display:block;
+  width:138px;
+  height:18px;
+  margin:0 auto;
+  background: url(/assets/images/five-stars.png) no-repeat 0 0;
+  @extend %image-replacement;
 }
 
-
-form#luvver {
-  ul {
-    @include list_style_none;
-    margin-top: 5px;
-  }
-  .form-wrap {
-    @extend %clearfix;
-    input#paragraphs {margin-left: 10px; padding: 0;}
-    margin: 0 0 10px 0;
-  }
-  input[type="submit"] {margin-top: 10px;}
+.site-title:after {
+  content: "Made in Bristol";
+  display:block;
+  width:136px;
+  height:34px;
+  margin:0 auto 0;
+  background: url(/assets/images/made-in-bristol.png) no-repeat 0 0;
+  @extend %image-replacement;
 }
