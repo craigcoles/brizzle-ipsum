@@ -1,3 +1,10 @@
+.form-block form:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
 .site-title, .site-title:before, .site-title:after {
   overflow: hidden;
   text-align: left;
@@ -190,33 +197,104 @@ a img {
 table {
   border-collapse: collapse; }
 
+form input[type="text"] {
+  padding: 0.5em 0.6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 0.8em;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px; }
+form input:not([type]) {
+  padding: 0.5em 0.6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 0.8em;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px; }
+form input[type="text"]:focus {
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  border-color: #129FEA; }
+form input:not([type]):focus {
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  border-color: #129FEA; }
+form input[type="radio"]:focus,
+form input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 1px auto #129FEA; }
+form .btn {
+  font-family: inherit;
+  font-size: 100%;
+  *font-size: 90%;
+  /*IE 6/7 - To reduce IE's oversized button text*/
+  *overflow: visible;
+  /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+  padding: 0.5em 1em;
+  color: #fff;
+  border: 1px solid #999;
+  /*IE 6/7/8*/
+  border: none rgba(0, 0, 0, 0);
+  /*IE9 + everything else*/
+  background-color: #0078e7;
+  text-decoration: none;
+  border-radius: 2px; }
+
+@font-face {
+  font-family: 'Proxima-Nova';
+  src: url("/assets/fonts/proximanova-regular-webfont.eot");
+  src: url("/assets/fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/proximanova-regular-webfont.woff") format("woff"), url("/assets/fonts/proximanova-regular-webfont.ttf") format("truetype"), url("/assets/fonts/proximanova-regular-webfont.svg#webfont") format("svg"); }
+
+@font-face {
+  font-family: 'Proxima-Nova-Light';
+  src: url("/assets/fonts/proximanova-light-webfont.eot");
+  src: url("/assets/fonts/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/proximanova-light-webfont.woff") format("woff"), url("/assets/fonts/proximanova-light-webfont.ttf") format("truetype"), url("/assets/fonts/proximanova-light-webfont.svg#webfont") format("svg"); }
+
+body {
+  font-size: 100%;
+  font-family: 'Proxima-Nova', "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+.main-content .output {
+  font-size: 16px;
+  font-size: 1rem; }
+
+.site-footer {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
 #page {
   width: auto;
+  padding-left: 35%;
   max-width: 100%;
   margin: 0 auto;
   clear: both;
   list-style: none;
   overflow: hidden; }
 
-.site-header, .main-content, .site-footer {
+.site-header, .site-footer {
   float: left;
-  padding: 0 50px; }
+  padding: 0 5%; }
 
 .site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 35%;
   height: 100%; }
 
 .main-content {
-  position: absolute;
+  margin: 0 5%; }
+
+.main-content .form-block {
+  width: 55%;
+  position: fixed;
   top: 0;
-  right: 0;
-  width: 65%; }
+  left: 40%; }
 
 .site-footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 35%; }
@@ -259,3 +337,27 @@ table {
   height: 34px;
   margin: 0 auto 0;
   background: url(/assets/images/made-in-bristol.png) no-repeat 0 0; }
+
+.main-content .block.output {
+  padding: 180px 0 30px 0;
+  color: #999999; }
+
+.site-footer {
+  color: white; }
+
+.form-block {
+  background-color: white;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #dddddd; }
+
+.form-block form {
+  height: 100px; }
+  .form-block form .input-wrap {
+    float: left;
+    margin-left: 20px; }
+    .form-block form .input-wrap ul {
+      background: none;
+      padding-left: 0;
+      list-style-type: none;
+      list-style-position: outside; }

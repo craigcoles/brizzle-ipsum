@@ -12,35 +12,61 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  width:209px;
-  height:189px;
-  margin:0 auto;
+  width: 209px;
+  height: 189px;
+  margin: 0 auto;
   background: url(/assets/images/brizzle-ipsum.png) no-repeat 0 38px;
   @extend %image-replacement;
   a {
-    display:block; 
-    height:97px;
-    margin:21px 0 20px 0;
-    border-bottom:0;
+    display: block; 
+    height: 97px;
+    margin: 21px 0 20px 0;
+    border-bottom: 0;
   }
 }
 
 .site-title:before {
   content: ".";
-  display:block;
-  width:138px;
-  height:18px;
-  margin:0 auto;
+  display: block;
+  width: 138px;
+  height: 18px;
+  margin: 0 auto;
   background: url(/assets/images/five-stars.png) no-repeat 0 0;
   @extend %image-replacement;
 }
 
 .site-title:after {
   content: "Made in Bristol";
-  display:block;
-  width:136px;
-  height:34px;
-  margin:0 auto 0;
+  display: block;
+  width: 136px;
+  height: 34px;
+  margin: 0 auto 0;
   background: url(/assets/images/made-in-bristol.png) no-repeat 0 0;
   @extend %image-replacement;
+}
+
+.main-content .block.output {
+  padding:180px 0 30px 0;
+  color:$body-color;
+}
+
+.site-footer {color:$light;}
+
+// --- Form Styling
+
+.form-block {
+  background-color:$light;
+  padding-bottom:30px;
+  margin-bottom:30px;
+  border-bottom:1px solid $light-grey;
+}
+
+.form-block form {
+  height:100px;
+  @extend %clearfix;
+  .input-wrap {
+    float:left;
+    margin-left:20px;
+    ul {@include list_style_none;}
+  }
 }

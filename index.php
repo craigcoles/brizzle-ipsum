@@ -5,7 +5,7 @@
   $generator = new BristolIpsumGenerator();
   
   // Defaults
-  $number_of_paragraphs = 5;
+  $number_of_paragraphs = 10;
 
   if (isset($_REQUEST["paras"])) $number_of_paragraphs = intval($_REQUEST["paras"]);
 
@@ -106,34 +106,43 @@
       <section class="main-content">
 
         <!-- so: form -->
-        <form id="luvver" class="block" action="" method="get">
+        <div class="form-block">
 
-          <div class="form-wrap">
-            <label for="paragraphs">Num. of Paragraphs:</label>
-            <!-- INLINE STYLE: REMOVE -->
-            <input id="paragraphs" style="width: 40px;" type="text" name="paras" value="5" maxlength="2" />
-            <!-- INLINE STYLE: REMOVE -->
-          </div>
+          <form id="luvver" class="block" action="" method="get">
 
-          <label for="paragraphs">Type of Ipusm:</label>
-          <ul>
-            <li>
-              <input id="luvver-and-filler" type="radio" name="type" value="luvver-and-filler" checked="checked" />
-              <label for="luvver-and-filler">Luvver and Filler</label>
-            </li> 
-            <li>
-              <input id="proper-gurt-lush" type="radio" name="type" value="proper-gurt-lush" />
-              <label for="proper-gurt-lush">Proper Gurt Lush</label> 
-            </li>
-          </ul>
-         
+            <div class="input-wrap">
+              <label for="paragraphs">Num. of Paragraphs:</label>
+              <!-- INLINE STYLE: REMOVE -->
+              <input id="paragraphs" style="width: 40px;" type="text" name="paras" value="5" maxlength="2" />
+              <!-- INLINE STYLE: REMOVE -->
+            </div>
 
-          <input id="start-with-luvver" type="checkbox" name="start-with-luvver" value="true" checked="checked" /> 
-          <label for="start-with-luvver">Start with 'All right me luvver...'</label>
+            <div class="input-wrap">
+              <label for="paragraphs">Type of Ipusm:</label>
+              <ul>
+                <li>
+                  <input id="luvver-and-filler" type="radio" name="type" value="luvver-and-filler" checked="checked" />
+                  <label for="luvver-and-filler">Luvver and Filler</label>
+                </li> 
+                <li>
+                  <input id="proper-gurt-lush" type="radio" name="type" value="proper-gurt-lush" />
+                  <label for="proper-gurt-lush">Proper Gurt Lush</label> 
+                </li>
+              </ul>
+            </div>
+           
+            <div class="input-wrap">
+              <input id="start-with-luvver" type="checkbox" name="start-with-luvver" value="true" checked="checked" /> 
+              <label for="start-with-luvver">Start with 'All right me luvver...'</label>
+            </div>
 
-          <input id="generate" type="submit" value="Generate" />
+            <div class="input-wrap">
+              <input id="generate" class="btn" type="submit" value="Generate" />
+            </div>
 
-        </form>
+          </form>
+
+        </div>
         <!-- eo: form -->
 
         <div class="block output">

@@ -1,8 +1,33 @@
 // ----- Font Face
 
+@font-face {
+  font-family: 'Proxima-Nova';
+  src: url('/assets/fonts/proximanova-regular-webfont.eot');                                    // IE9 Compat Modes
+  src: url('/assets/fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), // IE6-IE8 
+       url('/assets/fonts/proximanova-regular-webfont.woff') format('woff'),                    // Modern Browsers
+       url('/assets/fonts/proximanova-regular-webfont.ttf') format('truetype'),                 // Safari, Android, iOS
+       url('/assets/fonts/proximanova-regular-webfont.svg#webfont') format('svg');              // Legacy iOS
+}
+
+@font-face {
+  font-family: 'Proxima-Nova-Light';
+  src: url('/assets/fonts/proximanova-light-webfont.eot');                                    // IE9 Compat Modes
+  src: url('/assets/fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'), // IE6-IE8 
+       url('/assets/fonts/proximanova-light-webfont.woff') format('woff'),                    // Modern Browsers
+       url('/assets/fonts/proximanova-light-webfont.ttf') format('truetype'),                 // Safari, Android, iOS
+       url('/assets/fonts/proximanova-light-webfont.svg#webfont') format('svg');              // Legacy iOS
+}
+
+body {
+  font-size: 100%;
+  font-family: 'Proxima-Nova', "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
 // ----- Font Sizing
 
-// @include font_size(14);
+.main-content .output {@include font_size(16);}
+
+.site-footer {@include font_size(12);}
 
 // ----- Font Styling
 
