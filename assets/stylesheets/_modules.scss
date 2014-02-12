@@ -7,11 +7,6 @@
 }
 
 .site-title {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   width: 209px;
   height: 189px;
   margin: 0 auto;
@@ -46,27 +41,97 @@
 }
 
 .main-content .block.output {
-  padding:180px 0 30px 0;
+  padding: 0 0 30px 0;
   color:$body-color;
 }
 
-.site-footer {color:$light;}
+.site-footer {
+  color:$dark;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid $light-grey;
+  p {margin:0;}
+}
+
+.site-footer p.beef-love {
+  width:71px;
+  height:33px;
+  background: url(/assets/images/beef-logo.png) no-repeat 0 0;
+  margin:5px 0 20px 0;
+  @extend %image-replacement;
+  a {
+    display:block;
+    height:33px;
+  }
+}
 
 // --- Form Styling
 
 .form-block {
+  @extend %clearfix;
   background-color:$light;
-  padding-bottom:30px;
-  margin-bottom:30px;
-  border-bottom:1px solid $light-grey;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $light-grey;
 }
 
 .form-block form {
-  height:100px;
+  padding-top:30px;
   @extend %clearfix;
   .input-wrap {
-    float:left;
-    margin-left:20px;
+    float: left;
+    width:240px;
+    margin-left:30px;
+    margin-bottom:10px;
     ul {@include list_style_none;}
   }
+  .input-wrap:first-child {margin-left:0;}
+}
+
+form .input-wrap ul {
+  margin-top:10px;
+  margin-left:10px;
+  li {
+    margin-top:6px;
+    &:first-child {margin-top:0;}
+  }
+}
+
+form .input-wrap.count {
+  label {display:block;}
+  input {width:60px; margin-top:10px}
+}
+
+// --- Media Queries
+
+@media (min-width: 1250px) {
+
+  .site-footer p {
+    float:right;
+    &.beef-love {
+      float:left;
+      margin-bottom:0;
+    }
+  }
+
+}
+
+@media (min-width: 900px) {
+
+  .site-title {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .site-footer {
+    color:#818082;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: 0;
+    a {color:#818082;}
+  }
+
 }

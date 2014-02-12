@@ -1,6 +1,5 @@
 #page {
   width: auto;
-  padding-left: 35%;
   max-width: 100%;
   margin: 0 auto;
   clear: both;
@@ -8,35 +7,34 @@
   overflow: hidden;
 }
 
-%grid-item {
-  float: left;
-  padding: 0 5%;
-}
-
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  @extend %grid-item;
-  width: 35%;
-  height: 100%;
+  padding: 50px 0;
+  margin-bottom: 30px;
 }
 
-.main-content {
-  margin:0 5%;
-}
+.main-content {margin: 0 50px;}
 
-.main-content .form-block {
-  width:55%;
-  position: fixed;
-  top:0;
-  left:40%;
-}
+@media (min-width: 900px) {
 
-.site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  @extend %grid-item;
-  width: 35%;
+  #page {padding: 0 0 0 35%;}
+
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    float: left;
+    margin-bottom: 0;
+    padding: 0 50px;
+    width: 35%;
+    height: 100%;
+  }
+
+  .site-footer {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    padding: 0 50px;
+    width: 35%;
+  }
+
 }

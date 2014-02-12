@@ -110,15 +110,13 @@
 
           <form id="luvver" class="block" action="" method="get">
 
-            <div class="input-wrap">
-              <label for="paragraphs">Num. of Paragraphs:</label>
-              <!-- INLINE STYLE: REMOVE -->
-              <input id="paragraphs" style="width: 40px;" type="text" name="paras" value="5" maxlength="2" />
-              <!-- INLINE STYLE: REMOVE -->
+            <div class="input-wrap count">
+              <label for="paragraphs">Paragraph Count</label>
+              <input id="paragraphs" type="text" name="paras" value="5" maxlength="2" />
             </div>
 
             <div class="input-wrap">
-              <label for="paragraphs">Type of Ipusm:</label>
+              <label>Type of Ipusm:</label>
               <ul>
                 <li>
                   <input id="luvver-and-filler" type="radio" name="type" value="luvver-and-filler" checked="checked" />
@@ -136,7 +134,7 @@
               <label for="start-with-luvver">Start with 'All right me luvver...'</label>
             </div>
 
-            <div class="input-wrap">
+            <div class="input-wrap submit">
               <input id="generate" class="btn" type="submit" value="Generate" />
             </div>
 
@@ -158,13 +156,15 @@
       </section>
 
       <footer class="site-footer">
+        
+        <p class="beef-love"><a href="http://www.wearebeef.co.uk">Beef</a></p>
+        <p>
+          Made by <a href="http://craigcoles.co.uk" title="Craig Coles">Craig Coles</a> and <a href="http://discoliam.com" title="DiscoLiam">Liam Richardson</a>.<br/>
+          Based on <a href="https://github.com/petenelson/bacon-ipsum" title="Bacon Ipsum on Github">Bacon Ipsum</a>
+          by <a href="https://twitter.com/GunGeekATX" title="Pete Nelson on Twitter">Pete Nelson</a><br/>
+          Background Image taken by <a href="http://www.flickr.com/photos/danbri/8072271/">Dan Brickley</a>.
+        </p>
 
-        <p>Made 2013 <a href="http://craigcoles.co.uk" title="Craig Coles">Craig Coles</a>.
-        With help from <a href="http://discoliam.com" title="DiscoLiam">Liam Richardson</a>.
-        <br />Background Image taken by <a href="http://www.flickr.com/photos/danbri/8072271/">Dan Brickley</a>. 
-        Based on <a href="https://github.com/petenelson/bacon-ipsum" title="Bacon Ipsum on Github">Bacon Ipsum</a> 
-        by <a href="https://twitter.com/GunGeekATX" title="Pete Nelson on Twitter">Pete Nelson</a>.</p>
-      
       </footer>
 
     </div>
