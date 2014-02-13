@@ -32,8 +32,8 @@ body {
 
 a {
   text-decoration: none;
-  &:link, &:visited, &:active  {color: $brand-orange; font-weight: bold;}
-  &:hover { color: $brand-orange-hover;}
+  &:link, &:visited, &:active  {color: $pumpkin;}
+  &:hover { color: darken($pumpkin, 10%);}
   &:active, &:hover {outline: none;}
 }
 
@@ -92,9 +92,14 @@ form {
     color: #fff;
     border: 1px solid #999;  /*IE 6/7/8*/
     border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
-    background-color: rgb(0, 120, 231);
+    background-color: $green;
     text-decoration: none;
     border-radius: 2px;
+    -webkit-box-shadow: 0 2px 3px 0 #dddddd;
+box-shadow: 0 2px 3px 0 #dddddd;
+    &:hover{
+      background-color: darken($green, 10%);
+    }
   }
 
 }

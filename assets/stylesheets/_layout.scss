@@ -12,7 +12,7 @@
   margin-bottom: 30px;
 }
 
-.main-content {margin: 0 50px;}
+.main-content, .site-footer {margin: 0 10%;}
 
 @media (min-width: 900px) {
 
@@ -33,6 +33,7 @@
     position: fixed;
     bottom: 20px;
     left: 0;
+    margin:0;
     padding: 0 50px;
     width: 35%;
   }

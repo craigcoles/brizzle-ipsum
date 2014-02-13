@@ -66,6 +66,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-precomposed.png">
 
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css'>
     <link href="assets/stylesheets/application.css" media="screen,tv,projection" rel="Stylesheet" type="text/css" />
      
     <!-- so:header JS -->
@@ -104,6 +106,19 @@
       </header>
 
       <section class="main-content">
+        
+
+        <div class="block output">
+                  <h1>All right me luvver...</h1>
+
+          <?php 
+            if (isset($_REQUEST["type"])) { 
+              print $output; 
+            } else {
+              print $output;
+            }
+          ?> 
+        </div>
 
         <!-- so: form -->
         <div class="form-block">
@@ -142,16 +157,6 @@
 
         </div>
         <!-- eo: form -->
-
-        <div class="block output">
-          <?php 
-            if (isset($_REQUEST["type"])) { 
-              print $output; 
-            } else {
-              print $output;
-            }
-          ?> 
-        </div>
 
       </section>
 

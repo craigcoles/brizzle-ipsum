@@ -41,7 +41,7 @@
 }
 
 .main-content .block.output {
-  padding: 0 0 30px 0;
+  padding: 20px 0 0 0;
   color:$body-color;
 }
 
@@ -50,14 +50,17 @@
   padding-top: 30px;
   padding-bottom: 30px;
   border-top: 1px solid $light-grey;
-  p {margin:0;}
+  p {
+    margin:0;
+    text-align:center;
+  }
 }
 
 .site-footer p.beef-love {
   width:71px;
   height:33px;
-  background: url(/assets/images/beef-logo.png) no-repeat 0 0;
-  margin:5px 0 20px 0;
+  background: url(/assets/images/beef-logo-alt.png) no-repeat 0 0;
+  margin: 0 auto 20px auto;
   @extend %image-replacement;
   a {
     display:block;
@@ -70,27 +73,32 @@
 .form-block {
   @extend %clearfix;
   background-color:$light;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid $light-grey;
+  padding-top: 10px;
+  margin-top: 30px;
+  margin-bottom:30px;
+  border-top: 1px solid $light-grey;
 }
 
 .form-block form {
   padding-top:30px;
   @extend %clearfix;
   .input-wrap {
-    float: left;
-    width:240px;
-    margin-left:30px;
-    margin-bottom:10px;
+    margin-bottom:5px;
     ul {@include list_style_none;}
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 10px;
+      position:relative;
+      top:2px;
+    }
+
   }
   .input-wrap:first-child {margin-left:0;}
 }
 
 form .input-wrap ul {
   margin-top:10px;
-  margin-left:10px;
   li {
     margin-top:6px;
     &:first-child {margin-top:0;}
@@ -98,13 +106,17 @@ form .input-wrap ul {
 }
 
 form .input-wrap.count {
-  label {display:block;}
+  label {margin-right:10px;}
   input {width:60px; margin-top:10px}
 }
+
+form .input-wrap.submit {margin-top:20px;}
 
 // --- Media Queries
 
 @media (min-width: 1250px) {
+
+  form .input-wrap.count label{display:block;}
 
   .site-footer p {
     float:right;
@@ -126,12 +138,30 @@ form .input-wrap.count {
     transform: translateY(-50%);
   }
 
+  .main-content .block.output {
+    padding: 50px 0 0 0;
+  }
+
   .site-footer {
     color:#818082;
     padding-top: 0;
     padding-bottom: 0;
     border-top: 0;
-    a {color:#818082;}
+    p {text-align:left;}
+    p.beef-love {
+      margin:5px 0 20px 0;
+      background: url(/assets/images/beef-logo.png) no-repeat 0 0;
+    }
+  }
+
+}
+
+@media (min-width: 650px) {
+
+  form .input-wrap {
+    float: left;
+    width: 32%;
+    margin-left: 1.665%;
   }
 
 }

@@ -176,10 +176,9 @@ body {
 a {
   text-decoration: none; }
   a:link, a:visited, a:active {
-    color: #ff4629;
-    font-weight: bold; }
+    color: #d35400; }
   a:hover {
-    color: #a91700; }
+    color: #a04000; }
   a:active, a:hover {
     outline: none; }
 
@@ -230,23 +229,21 @@ form .btn {
   /*IE 6/7/8*/
   border: none rgba(0, 0, 0, 0);
   /*IE9 + everything else*/
-  background-color: #0078e7;
+  background-color: forestgreen;
   text-decoration: none;
-  border-radius: 2px; }
-
-@font-face {
-  font-family: 'Proxima-Nova';
-  src: url("/assets/fonts/proximanova-regular-webfont.eot");
-  src: url("/assets/fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/proximanova-regular-webfont.woff") format("woff"), url("/assets/fonts/proximanova-regular-webfont.ttf") format("truetype"), url("/assets/fonts/proximanova-regular-webfont.svg#webfont") format("svg"); }
-
-@font-face {
-  font-family: 'Proxima-Nova-Light';
-  src: url("/assets/fonts/proximanova-light-webfont.eot");
-  src: url("/assets/fonts/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/proximanova-light-webfont.woff") format("woff"), url("/assets/fonts/proximanova-light-webfont.ttf") format("truetype"), url("/assets/fonts/proximanova-light-webfont.svg#webfont") format("svg"); }
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 3px 0 #dddddd;
+  box-shadow: 0 2px 3px 0 #dddddd; }
+  form .btn:hover {
+    background-color: #186218; }
 
 body {
   font-size: 100%;
-  font-family: 'Proxima-Nova', "Helvetica Neue", Arial, Helvetica, sans-serif; }
+  font-family: 'Alegreya', serif; }
+
+.site-footer p, form {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400; }
 
 .main-content .output {
   font-size: 16px;
@@ -268,8 +265,8 @@ body {
   padding: 50px 0;
   margin-bottom: 30px; }
 
-.main-content {
-  margin: 0 50px; }
+.main-content, .site-footer {
+  margin: 0 10%; }
 
 @media (min-width: 900px) {
   #page {
@@ -289,6 +286,7 @@ body {
     position: fixed;
     bottom: 20px;
     left: 0;
+    margin: 0;
     padding: 0 50px;
     width: 35%; } }
 .site-header {
@@ -326,8 +324,8 @@ body {
   background: url(/assets/images/made-in-bristol.png) no-repeat 0 0; }
 
 .main-content .block.output {
-  padding: 0 0 30px 0;
-  color: #999999; }
+  padding: 20px 0 0 0;
+  color: #5a5a5a; }
 
 .site-footer {
   color: black;
@@ -335,53 +333,62 @@ body {
   padding-bottom: 30px;
   border-top: 1px solid #dddddd; }
   .site-footer p {
-    margin: 0; }
+    margin: 0;
+    text-align: center; }
 
 .site-footer p.beef-love {
   width: 71px;
   height: 33px;
-  background: url(/assets/images/beef-logo.png) no-repeat 0 0;
-  margin: 5px 0 20px 0; }
+  background: url(/assets/images/beef-logo-alt.png) no-repeat 0 0;
+  margin: 0 auto 20px auto; }
   .site-footer p.beef-love a {
     display: block;
     height: 33px; }
 
 .form-block {
   background-color: white;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  margin-top: 30px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #dddddd; }
+  border-top: 1px solid #dddddd; }
 
 .form-block form {
   padding-top: 30px; }
   .form-block form .input-wrap {
-    float: left;
-    width: 240px;
-    margin-left: 30px;
-    margin-bottom: 10px; }
+    margin-bottom: 5px; }
     .form-block form .input-wrap ul {
       background: none;
       padding-left: 0;
       list-style-type: none;
       list-style-position: outside; }
+    .form-block form .input-wrap input[type="checkbox"],
+    .form-block form .input-wrap input[type="radio"] {
+      margin-right: 10px;
+      position: relative;
+      top: 2px; }
   .form-block form .input-wrap:first-child {
     margin-left: 0; }
 
 form .input-wrap ul {
-  margin-top: 10px;
-  margin-left: 10px; }
+  margin-top: 10px; }
   form .input-wrap ul li {
     margin-top: 6px; }
     form .input-wrap ul li:first-child {
       margin-top: 0; }
 
 form .input-wrap.count label {
-  display: block; }
+  margin-right: 10px; }
 form .input-wrap.count input {
   width: 60px;
   margin-top: 10px; }
 
+form .input-wrap.submit {
+  margin-top: 20px; }
+
 @media (min-width: 1250px) {
+  form .input-wrap.count label {
+    display: block; }
+
   .site-footer p {
     float: right; }
     .site-footer p.beef-love {
@@ -395,10 +402,21 @@ form .input-wrap.count input {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
 
+  .main-content .block.output {
+    padding: 50px 0 0 0; }
+
   .site-footer {
     color: #818082;
     padding-top: 0;
     padding-bottom: 0;
     border-top: 0; }
-    .site-footer a {
-      color: #818082; } }
+    .site-footer p {
+      text-align: left; }
+    .site-footer p.beef-love {
+      margin: 5px 0 20px 0;
+      background: url(/assets/images/beef-logo.png) no-repeat 0 0; } }
+@media (min-width: 650px) {
+  form .input-wrap {
+    float: left;
+    width: 32%;
+    margin-left: 1.665%; } }
