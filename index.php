@@ -180,7 +180,6 @@
       <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
       <!-- Custom -->
-      <script src="assets/javascripts/jquery.plugin.clipboard.js"></script>
       <script src="assets/javascripts/application.js"></script>
     <!--<![endif]-->
   <!-- eo:JavaScripts -->
