@@ -1,0 +1,85 @@
+// Colours
+$light: #fff;
+$dark: #000;
+$black-soft: #4c4c4c;
+$light-grey: #ddd;
+$code-light-red: #ff0000;
+$code-dark-red: #a31515;
+$code-blue: #0000ff;
+
+$brand-orange: #ff4629;
+$brand-orange-hover: darken($brand-orange, 25%);
+
+$body-color: #5a5a5a;
+
+$green: #228B22;
+
+
+// Flat Colours
+$conrete: #95a5a6;
+$silver: #bdc3c7;
+$asbestos: #7f8c8d;
+
+$wet-asphalt: #34495e;
+$midnight-blue: #2c3e50;
+
+
+$alizarin: #e74c3c;
+$pomrgrante: #c0392b;
+
+$carrot: #e67e22;
+$pumpkin: #d35400;
+
+// Links
+$link: #00f;
+$link-hover: darken($link, 20%);
+
+// Base Font Size
+$basefont: 16;
+
+
+// ----- Mixins
+
+@mixin list_style_none {
+  background: none;
+  padding-left: 0;
+  list-style-type: none;
+  list-style-position: outside;
+}
+
+@mixin border_radius($radius: 4px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin font_size($size: 12, $base: $basefont) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+@mixin line_height($size: 12, $base: $basefont) {
+  line-height: $size + px;
+  line-height: ($size / $base) * 1rem;
+}
+
+// ----- Placeholders
+
+%clearfix {
+   &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
+}
+
+%image-replacement {
+   overflow: hidden;
+   text-align: left;
+   display: block;
+   line-height: 0;
+   text-indent: -1000em;
+}

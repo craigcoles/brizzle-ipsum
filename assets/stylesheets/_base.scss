@@ -1,31 +1,105 @@
-/* Base */
-/* Base styles for html elements  */
+// ----- HTML
 
-// Body
-// ------------------------------------------------------------
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+// --- Apply a natural box layout model to all elements
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+// ----- Body
 
 body {
-  background: url(/assets/images/bristol.jpg) no-repeat top center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: $light;
   color: $dark;
 }
 
-// Paragraphs
-// ------------------------------------------------------------
+::selection {
+  // background: $light;
+  // color: $brand-orange;
+}
 
-// Links
-// ------------------------------------------------------------
+::-moz-selection {
+  // background: $light;
+  // color: $brand-orange;
+}
+
+// ----- Paragraphs
+
+// ----- Links
 
 a {
   text-decoration: none;
-  &:link, &:visited, &:active  {color: $link;}
-  &:hover { color: $link-hover;}
+  &:link, &:visited, &:active  {color: $pumpkin;}
+  &:hover { color: darken($pumpkin, 10%);}
   &:active, &:hover {outline: none;}
 }
 
-h1{
-  margin: 0 0 0 0;
+a img {border: none;}
+
+// ----- Table
+
+table { border-collapse: collapse; }
+
+// ----- Forms
+
+form {
+
+  input[type="text"] {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 0.8em;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+  }
+
+  input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 0.8em;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+  }
+
+  input[type="text"]:focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    border-color: #129FEA;
+  }
+
+  input:not([type]):focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    border-color: #129FEA;
+  }
+
+  input[type="radio"]:focus,
+  input[type="checkbox"]:focus {
+    outline: thin dotted #333;
+    outline: 1px auto #129FEA;
+  }
+
+  .btn {
+    font-family: inherit;
+    font-size: 100%;
+    *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
+    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+    padding: 0.5em 1em;
+    color: #fff;
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    background-color: $green;
+    text-decoration: none;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 3px 0 #dddddd;
+box-shadow: 0 2px 3px 0 #dddddd;
+    &:hover{
+      background-color: darken($green, 10%);
+    }
+  }
+
 }
