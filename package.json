@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=brizzle-ipsum && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "tsm": "^2.3.0",
+    "turbo": "^2.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "name": "with-changesets",
+  "packageManager": "npm@9.5.1",
+  "workspaces": [
+    "packages/*"
+  ]
+}

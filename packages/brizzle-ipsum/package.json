@@ -1,0 +1,40 @@
+{
+  "name": "brizzle-ipsum",
+  "version": "0.0.0",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.module.js",
+  "modern": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "module": "./dist/index.module.js",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "test": "uvu --require tsm tests",
+    "test:coverage": "c8 --include=src npm test",
+    "test:report": "c8 report --reporter=text-lcov > coverage.lcov",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "c8": "^10.1.3",
+    "eslint": "^8.57.0",
+    "typescript": "^5.7.2",
+    "uvu": "^0.5.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
