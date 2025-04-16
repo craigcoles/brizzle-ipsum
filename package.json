@@ -1,8 +1,11 @@
 {
+  "name": "brizzle-ipsum",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
     "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo test",
+    "test:coverage": "turbo test:coverage",
     "lint": "turbo run lint",
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -17,10 +20,6 @@
     "tsm": "^2.3.0",
     "turbo": "^2.5.0"
   },
-  "engines": {
-    "node": ">=18"
-  },
-  "name": "with-changesets",
   "packageManager": "npm@9.5.1",
   "workspaces": [
     "packages/*"

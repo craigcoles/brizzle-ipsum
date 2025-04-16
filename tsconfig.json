@@ -10,7 +10,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "noEmit": true,
+    // "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "resolveJsonModule": true,

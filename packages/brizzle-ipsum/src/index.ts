@@ -1,3 +1,3 @@
-import { ipsum, paragraph, sentence } from "../lib/generator";
+import { ipsum, paragraph, sentence } from "./lib/generator";
 
 export { sentence, paragraph, ipsum };

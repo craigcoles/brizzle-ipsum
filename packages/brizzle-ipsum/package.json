@@ -1,11 +1,28 @@
 {
   "name": "brizzle-ipsum",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Lorem ipsum inspired by the dialect of Bristolian folk",
+  "author": "Craig Coles",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigcoles/brizzle-ipsum.git"
+  },
   "sideEffects": false,
   "license": "MIT",
   "files": [
     "dist",
     "src"
+  ],
+  "keywords": [
+    "bristol",
+    "brizzle",
+    "lorem",
+    "ipsum",
+    "placeholder",
+    "text",
+    "dummy",
+    "gurt",
+    "filler"
   ],
   "source": "./src/index.ts",
   "main": "./dist/index.js",

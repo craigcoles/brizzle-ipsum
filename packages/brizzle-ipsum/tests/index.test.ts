@@ -1,9 +1,9 @@
 import * as assert from "uvu/assert";
 import { describe } from "./helpers";
 import { ipsum, paragraph, sentence } from "../src";
-import { MODES, PARAGRAPH_LENGTH, STARTER } from "../lib/constants";
-import gurt from "../lib/filler";
-import filler from "../lib/filler";
+import { MODES, PARAGRAPH_LENGTH, STARTER } from "../src/lib/constants";
+import gurt from "../src/lib/filler";
+import filler from "../src/lib/filler";
 
 describe("sentence", it => {
   const s = sentence();
