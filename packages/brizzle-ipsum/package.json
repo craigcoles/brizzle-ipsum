@@ -1,7 +1,7 @@
 {
   "name": "brizzle-ipsum",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Lorem ipsum inspired by the dialect of Bristolian folk",
   "author": "Craig Coles",
   "repository": {
