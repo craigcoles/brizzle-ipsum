@@ -1,0 +1,28 @@
+{
+  "name": "brizzle-ipsum",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo test",
+    "test:coverage": "turbo test:coverage",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=brizzle-ipsum && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@types/node": "^25.6.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "tsm": "^2.3.0",
+    "turbo": "^2.5.0"
+  },
+  "packageManager": "npm@9.5.1",
+  "workspaces": [
+    "packages/*"
+  ]
+}

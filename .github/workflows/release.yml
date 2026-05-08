@@ -1,0 +1,69 @@
+name: Draft GitHub Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - packages/brizzle-ipsum/package.json
+      - packages/brizzle-ipsum/CHANGELOG.md
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  draft-release:
+    name: Draft Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Inspect version bump
+        id: release
+        run: |
+          version="$(node -p "require('./packages/brizzle-ipsum/package.json').version")"
+          tag="brizzle-ipsum@${version}"
+          before="${{ github.event.before }}"
+
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+
+          if git rev-parse --verify --quiet "refs/tags/${tag}" >/dev/null; then
+            echo "should_create=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if git cat-file -e "${before}^{commit}" 2>/dev/null && git diff --quiet "${before}" "$GITHUB_SHA" -- packages/brizzle-ipsum/package.json; then
+            echo "should_create=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "should_create=true" >> "$GITHUB_OUTPUT"
+
+      - name: Prepare release notes
+        if: steps.release.outputs.should_create == 'true'
+        run: |
+          if [ -f packages/brizzle-ipsum/CHANGELOG.md ]; then
+            awk 'BEGIN { found=0 } /^## / { if (found) exit; found=1; next } found { print }' packages/brizzle-ipsum/CHANGELOG.md > release-notes.md
+          fi
+
+          if [ ! -s release-notes.md ]; then
+            echo "Release brizzle-ipsum@${{ steps.release.outputs.version }}." > release-notes.md
+          fi
+
+      - name: Create draft release
+        if: steps.release.outputs.should_create == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.release.outputs.tag }}
+          name: brizzle-ipsum ${{ steps.release.outputs.version }}
+          body_path: release-notes.md
+          draft: true
+          prerelease: ${{ contains(steps.release.outputs.version, '-') }}

@@ -1,0 +1,58 @@
+{
+  "name": "brizzle-ipsum",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Lorem ipsum inspired by the dialect of Bristolian folk",
+  "author": "Craig Coles",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigcoles/brizzle-ipsum.git"
+  },
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "bristol",
+    "brizzle",
+    "lorem",
+    "ipsum",
+    "placeholder",
+    "text",
+    "dummy",
+    "gurt",
+    "filler"
+  ],
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.module.js",
+  "modern": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "module": "./dist/index.module.js",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "test": "node --import tsx/esm --test tests/**/*.test.ts",
+    "test:coverage": "node --import tsx/esm --experimental-test-coverage --test tests/**/*.test.ts",
+    "test:report": "node --import tsx/esm --experimental-test-coverage --test-reporter=lcov --test tests/**/*.test.ts > coverage.lcov",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "c8": "^10.1.3",
+    "eslint": "^8.57.0",
+    "typescript": "^5.7.2",
+    "tsx": "^4.19.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
